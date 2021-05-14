@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'cn.settile'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    implementation 'com.github.kuaidi100-api:sdk:1.0.1'
+
+    // https://mvnrepository.com/artifact/commons-beanutils/commons-beanutils
+    implementation group: 'commons-beanutils', name: 'commons-beanutils', version: '1.9.4'
+
+}

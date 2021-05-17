@@ -1,4 +1,4 @@
-package cn.settile.lzjyzq2.ioc;
+package cn.settile.lzjyzq2.ioc.factory;
 
 /**
  * @author 阳志强

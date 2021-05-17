@@ -76,4 +76,18 @@ public class BeanUtil {
         field.set(target,property);
         field.setAccessible(accessible);
     }
+
+
+    public static String getBeanName(Class<?> clazz){
+        Annotation annotation = AnnotationUtil.findAnnontation(clazz,Component.class);
+        assert annotation != null;
+        if(clazz.isAnnotationPresent(annotation.getClass())){
+            return getLowerFirstCaseName(clazz);
+        }else {
+            for (Class<?> anInterface : clazz.getInterfaces()) {
+                return getBeanName(clazz);
+            }
+        }
+        return null;
+    }
 }
